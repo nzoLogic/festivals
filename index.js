@@ -1,9 +1,15 @@
 import express from 'express';
-import DB from './db';
 let app = express();
+let db = require('./db');
+
+
+app.get('/api/festivals', (req, res) => {
+  let festivals = db.Festival.find({}, (err, festivals) => err? console.log("error in db") : res.json(festivals))
+})
 
 app.get('/*', (req, res) => {
   res.send('hello')
 })
-app.get('/api/festivals')
-app.listen(3001, () => console.log('listening on 3k'))
+
+
+app.listen(3001, () => console.log('listening on 3001'))
