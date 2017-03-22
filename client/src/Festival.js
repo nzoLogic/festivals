@@ -15,6 +15,7 @@ class Festival extends Component {
       return (<tr key={index}>
         <td>{festival.name}</td>
         <td>{festival.location}</td>
+        <td>{festival.date}</td>
         </tr>)
       })
     return (
