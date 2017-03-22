@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.9.0",
+    "concurrently": "^3.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
