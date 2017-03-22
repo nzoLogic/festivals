@@ -30,12 +30,6 @@ class Festival extends Component {
             {festivalRow}
           </tbody>
         </table>
-        <div className="ui card">
-          <div className="content">
-            <p className="header">Aaron</p>
-            <div className="meta"><span className="date">Age: 25</span></div>
-          </div>
-        </div>
       </div>
     );
   }
