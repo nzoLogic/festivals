@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import Client from './Client';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import FestivalShow from './FestivalShow';
+
 class Festival extends Component {
   constructor (props) {
     super()
@@ -11,9 +18,11 @@ class Festival extends Component {
     this.setState({festivals: response})
   });
   render() {
-    const festivalRow = this.state.festivals.map((festival, index) => {
+    const festivalRow =
+
+      this.state.festivals.map((festival, index) => {
       return (<tr key={index}>
-        <td>{festival.name}</td>
+        <td><Link to={festival.name}>{festival.name}</Link></td>
         <td>{festival.location}</td>
         <td>{festival.date}</td>
         </tr>)
@@ -30,6 +39,8 @@ class Festival extends Component {
             {festivalRow}
           </tbody>
         </table>
+        <Route path="/:id" component={FestivalShow} />
+
       </div>
     );
   }
