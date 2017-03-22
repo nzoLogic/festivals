@@ -1,42 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Client from './Client';
-
 class Festival extends Component {
-  state = {
-    festivals: [],
-    showRemoveIcon: false,
-    searchValue: ''
+  constructor (props) {
+    super()
+    this.state ={
+      festivals: []
+    }
   }
-
-  handleSearch = (e) => {
-    console.log("handle search fired")
-    Client.search()
-          .then((festivals) => {
-            console.log('festivals is ', festivals)
-            this.setState({
-              festivals: festivals
-            });
-    });
-  }
-
+  getFestivals = Client.search((response)=> {
+    this.setState({festivals: response})
+  });
   render() {
-    const {festivals } = this.state;
+    const festivalRow = this.state.festivals.map((festival, index) => {
+      return (<tr key={index}>
+        <td>{festival.name}</td>
+        <td>{festival.location}</td>
+        </tr>)
+      })
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Festival Season!</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p> </p>
-        <button onClick={this.handleSearch}>Festivals</button>
-       </div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th><h5>Festivals</h5></th>
+            </tr>
+          </thead>
+          <tbody>
+            {festivalRow}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
+
 
 export default Festival;

@@ -3,7 +3,8 @@ function search(cb) {
   return fetch(`api/festivals`, {
     accept: 'application/json',
   }).then(checkStatus)
-    .then(parseJSON);
+    .then(parseJSON)
+    .then(cb);
 }
 
 function checkStatus(response){

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Festival from './Festival';
+import Home from './Home.js';
 import './index.css';
 
 ReactDOM.render(
-  <Festival />,
+  <Home />,
   document.getElementById('root')
 );
