@@ -7,6 +7,7 @@ import {
 import Home from './Home';
 import Festival from './Festival';
 import Welcome from './Welcome';
+import FestivalShow from './FestivalShow';
 
 class Navigation extends Component {
   render () {
@@ -20,6 +21,7 @@ class Navigation extends Component {
         <div>
           <Route exact path="/" component={Welcome} />
           <Route path="/festivals" component={Festival}/>
+          <Route path="/festivals/:name" component={FestivalShow} />
 
         </div>
         </div>

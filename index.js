@@ -10,6 +10,11 @@ app.get('/api/festivals', (req, res) => {
   let festivals = db.Festival.find({}, (err, festivals) => err? console.log("error in db") : res.json(festivals))
 })
 
+//Find festival by name
+app.get('/api/festivals/:name', (req, res) => {
+  let name = req.params.name;
+  db.Festival.find({name: name}, (err, festival) => err ? console.log("error in db") : res.json(festival))
+})
 //redirect all other routes to default
 app.get('/*', (req, res) => {
   res.send('hello')

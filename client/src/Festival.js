@@ -22,7 +22,7 @@ class Festival extends Component {
 
       this.state.festivals.map((festival, index) => {
       return (<tr key={index}>
-        <td><Link to={festival.name}>{festival.name}</Link></td>
+        <td><Link to={"/festivals/"+festival.name}>{festival.name}</Link></td>
         <td>{festival.location}</td>
         <td>{festival.date}</td>
         </tr>)
@@ -39,7 +39,7 @@ class Festival extends Component {
             {festivalRow}
           </tbody>
         </table>
-        <Route path="/:id" component={FestivalShow} />
+
 
       </div>
     );

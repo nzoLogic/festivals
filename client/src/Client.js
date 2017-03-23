@@ -1,6 +1,6 @@
-function search(cb) {
-  console.log('inside search function')
-  return fetch(`api/festivals`, {
+function search(cb, param) {
+  let params = param ? param : '';
+  return fetch(`api/festivals/${params}`, {
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON)
