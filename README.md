@@ -1,4 +1,4 @@
-# Festival Season!
+# [Festival Season!](https://github.com/nzoLogic/festivals)
 (beta version)
 
 Set out to learn ReactJS and with festival season upon us, what better way to celebrate than build a full MERN (Mongoose, Express, React, Node) application that displays some upcoming music festivals!
@@ -6,6 +6,7 @@ Set out to learn ReactJS and with festival season upon us, what better way to ce
 Server entry point is index.js which serves the React front-end through the 'client' directory.
 
 If you cloned the repo, run npm start in the root directory. That triggers concurrently to run the server and webpack client server.
+
 
 ### Technological Features
 
