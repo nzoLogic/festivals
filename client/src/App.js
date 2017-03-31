@@ -1,17 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Home from './Home'
+import Festivals from './Festivals'
+import Festival from './Festival'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 export default React.createClass({
   render() {
     return (
-      <div>
-        <h3>appppp</h3>
-        <ul role="nav">
-          <li>
-            <Link to="/festivals">Festivals</Link>
-          </li>
-        </ul>
-      </div>
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/festivals">festivals</Link></li>
+          </ul>
+          <hr />
+
+        <Route exact path="/" component={Home} />
+        <Route path="/festivals" component={Festivals} />
+        </div>
+      </Router>
     )
   }
 })

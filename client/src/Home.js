@@ -1,11 +1,10 @@
 import React from 'react'
-import Client from './Client'
 
 export default React.createClass({
   render() {
     return(
       <div>
-        <h3>Festival</h3>
+        <h3>Hello</h3>
       </div>
     )
   }
