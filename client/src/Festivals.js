@@ -1,7 +1,13 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Client from './Client'
 
-export default React.createClass({
+class Festivals extends Component {
+  state = {
+    festivals: null
+  }
+  componentDidMount() {
+    Client.search((response) => this.setState({festivals: response}))
+  }
   render() {
     return(
       <div>
@@ -9,4 +15,6 @@ export default React.createClass({
       </div>
     )
   }
-})
+}
+
+export default Festivals
