@@ -1,6 +1,5 @@
-function search(cb, param) {
-  let params = param ? param : '';
-  return fetch(`api/festivals/${params}`, {
+function search(params, cb) {
+  return fetch(`http://localhost:3000/api${params}`, {
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON)
