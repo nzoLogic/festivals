@@ -9,11 +9,10 @@ export default React.createClass({
     return (
       <Router>
         <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/festivals">festivals</Link></li>
+          <ul className="ui tabular menu">
+            <li className="item"><Link to="/">Home</Link></li>
+            <li className="item"><Link to="/festivals">festivals</Link></li>
           </ul>
-          <hr />
 
         <Route exact path="/" component={Home} />
         <Route path="/festivals" component={Festivals} />
