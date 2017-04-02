@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Client from './Client'
-import Festival from './Festival'
+import FestivalRow from './Festival'
 import { Link, Route } from 'react-router-dom'
 
 class Festivals extends Component {
@@ -18,7 +18,9 @@ class Festivals extends Component {
       this.state.festivals.map((festival, index) => {
         return(
           <tr key={index}>
-          <td> <Link to={`/festivals/${festival.name}`}>{festival.name}</Link></td>
+          <td>
+          <FestivalRow festival={festival} />
+          </td>
           </tr>
         )
       })
@@ -35,7 +37,7 @@ class Festivals extends Component {
             {festivalRow}
           </tbody>
         </table>
-        <Route path="/festivals/:name" component={Festival} />
+        <Route path="/festivals/:name" component={FestivalRow} />
       </div>
     )
   }

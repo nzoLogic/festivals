@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './Home'
 import Festivals from './Festivals'
-import Festival from './Festival'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 export default React.createClass({

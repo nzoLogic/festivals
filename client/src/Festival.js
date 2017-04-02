@@ -1,23 +1,14 @@
 import React, { Component } from 'react'
 import Client from './Client'
 
-class Festival extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      festival: null
-    }
-  }
-  getFestival = Client.search(this.props.match.url, (response) => this.setState({festival: response[0]}))
+class FestivalRow extends Component {
   render() {
-    const festival = this.state.festival
+    let festival = this.props.festival
+    console.log("festival is ",festival)
     return(
-      <div>
-        <h3>Festival</h3>
-        {festival.date}
-      </div>
+      <p>{festival.name}</p>
     )
   }
 }
 
-export default Festival
+export default FestivalRow
