@@ -17,7 +17,7 @@ app.get('/api/festivals/:name', (req, res) => {
 })
 //redirect all other routes to default
 app.get('/*', (req, res) => {
-  res.status(400).json({error: "Bad request"})
+  res.send("")
 })
 
 
