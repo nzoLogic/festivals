@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Client from './Client'
 
 class FestivalRow extends Component {
@@ -7,7 +6,18 @@ class FestivalRow extends Component {
     let festival = this.props.festival
     console.log("festival is ",festival)
     return(
-      <Link to={`/festivals/${festival.name}`}>{festival.name}</Link>
+      <tr key={festival._id}>
+        <td>
+          <p className="ui item">{festival.name}</p>
+        </td>
+        <td>
+          <p className="ui item">{festival.location}</p>
+        </td>
+        <td>
+          <p className="ui item">{festival.date}</p>
+        </td>
+
+      </tr>
     )
   }
 }
