@@ -10,7 +10,7 @@ export default React.createClass({
         <div>
           <ul className="ui tabular menu">
             <li className="item"><Link to="/">Home</Link></li>
-            <li className="item"><Link to="/festivals">festivals</Link></li>
+            <li className="item"><Link to="/festivals">Festivals</Link></li>
           </ul>
 
         <Route exact path="/" component={Home} />
