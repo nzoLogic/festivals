@@ -1,5 +1,5 @@
 function search(params, cb) {
-  return fetch(`http://localhost:3000/api${params}`, {
+  return fetch(`/api${params}`, {
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON)

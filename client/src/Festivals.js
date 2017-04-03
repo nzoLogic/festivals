@@ -17,7 +17,7 @@ class Festivals extends Component {
     const festivalRow =
       this.state.festivals.map((festival, index) => {
         return(
-          <FestivalRow festival={festival} />
+          <FestivalRow festival={festival} key={index} />
         )
       })
     return(
