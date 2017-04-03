@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Client from './Client'
 
 class FestivalRow extends Component {
@@ -6,7 +7,7 @@ class FestivalRow extends Component {
     let festival = this.props.festival
     console.log("festival is ",festival)
     return(
-      <p>{festival.name}</p>
+      <Link to={`/festivals/${festival.name}`}>{festival.name}</Link>
     )
   }
 }

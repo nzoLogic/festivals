@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Client from './Client'
 import FestivalRow from './Festival'
-import { Link, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 class Festivals extends Component {
   constructor(props){
@@ -25,14 +25,9 @@ class Festivals extends Component {
         )
       })
     return(
-      <div>
-        <h3>Festivals</h3>
-        <table className="ui selectable structured large table">
-          <thead colSpan="5">
-          <tr>
-            <td><h3>Upcoming Festivals</h3></td>
-          </tr>
-          </thead>
+      <div className="ui container">
+        <h3>Upcoming Festivals</h3>
+        <table className="ui selectable structured table">
           <tbody>
             {festivalRow}
           </tbody>

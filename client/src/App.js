@@ -15,7 +15,9 @@ export default React.createClass({
 
         <Route exact path="/" component={Home} />
         <Route path="/festivals" component={Festivals} />
-        {this.props.children}
+          <main className="ui container">
+            {this.props.children}
+          </main>
         </div>
       </Router>
     )
