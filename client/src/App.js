@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import Festivals from './Festivals'
+import FestivalPage from './FestivalPage'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 export default React.createClass({
@@ -14,10 +15,10 @@ export default React.createClass({
           </ul>
 
         <Route exact path="/" component={Home} />
-        <Route path="/festivals" component={Festivals} />
-          <main className="ui container">
-            {this.props.children}
-          </main>
+        <Route exact path="/festivals" component={Festivals} />
+        <Route path="/festivals/:name" render={({ match }) => (
+            <FestivalPage component={FestivalPage} />
+          )} />
         </div>
       </Router>
     )

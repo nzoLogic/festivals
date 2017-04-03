@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Client from './Client'
 import FestivalRow from './Festival'
+import FestivalPage from './FestivalPage'
 import { Route } from 'react-router-dom'
 
 class Festivals extends Component {
@@ -10,7 +11,7 @@ class Festivals extends Component {
       festivals: []
     }
   }
-
+//calls the API to return all festivals
   getFestivals = Client.search(this.props.match.url, (response) => this.setState({festivals: response}))
 
   render() {
@@ -28,7 +29,9 @@ class Festivals extends Component {
             {festivalRow}
           </tbody>
         </table>
-        <Route path="/festivals/:name" component={FestivalRow} />
+        <Route path="/festivals/:name" render={({ match }) => (
+            <FestivalPage festival={this.state.festivals.find(f => f.name === match.params.name)} />
+          )} />
       </div>
     )
   }

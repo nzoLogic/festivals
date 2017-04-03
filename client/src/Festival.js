@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Client from './Client'
+import { Link, Route } from 'react-router-dom'
 
 class FestivalRow extends Component {
   render() {
@@ -8,7 +8,7 @@ class FestivalRow extends Component {
     return(
       <tr key={festival._id}>
         <td>
-          <p className="ui item">{festival.name}</p>
+          <Link to={`/festivals/${festival.name}`} className="ui item">{festival.name}</Link>
         </td>
         <td>
           <p className="ui item">{festival.location}</p>
