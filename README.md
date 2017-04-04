@@ -1,4 +1,4 @@
-# [Festival Season!](https://github.com/nzoLogic/festivals)
+# [Festival Season!](https://react-festivals.herokuapp.com/)
 (beta version)
 
 Set out to learn ReactJS and with festival season upon us, what better way to celebrate than build a full MERN (Mongoose, Express, React, Node) application that displays some upcoming music festivals!
