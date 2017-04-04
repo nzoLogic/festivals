@@ -23,7 +23,7 @@ class FestivalPage extends Component {
         { festival ?
           <div className="12 wide column">
 
-            <img className="Image-Header" src={festival.image} ></img>
+            <img className="Image-Header" src={festival.image} alt="magical experience"></img>
             <a href={explore} className="fluid ui teal button massive">EXPLORE</a>
           </div>
 
