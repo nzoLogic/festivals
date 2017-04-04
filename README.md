@@ -5,12 +5,12 @@ Set out to learn ReactJS and with festival season upon us, what better way to ce
 
 Server entry point is index.js which serves the React front-end through the 'client' directory.
 
-If you cloned the repo, run npm start in the root directory. That triggers concurrently to run the server and webpack client server.
+If you cloned the repo, **you must have mongodb installed and running** then run npm start in the root directory in your terminal. That triggers concurrently to run the server and webpack client server.
 
 
 ### Technological Features
 
-* MongoDB API returns **JSON** data
+* MongoDB API returns JSON data
 * Serving React front-end with Express Server
 * Proxied front-end API requests with [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and [Concurrently](https://www.npmjs.com/package/concurrently)
 * [Semantic UI](https://semantic-ui.com/) for general styling
