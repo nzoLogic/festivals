@@ -14,9 +14,9 @@ class Festivals extends Component {
 
   render() {
     const festivals = this.state.festivals
-    const loader = <div className="ui active inverted dimmer">
-            <div className="ui text loader">Loading</div>
-                </div>
+    const loader = <tr className="ui active inverted dimmer">
+            <td className="ui text loader">Loading</td>
+            </tr>
     return(
       <div className="ui container">
         <h3>Upcoming Festivals</h3>
