@@ -5,8 +5,11 @@ class FestivalPage extends Component {
   state = {
     festival: null
   }
+  componentDidMount() {
+    Client.search(this.props.match.url, (response) => this.setState({festival: response[0]}))
+  }
   render() {
-    let festival = this.state
+    let festival = this.state.festival
     const loading = <p>...loading...</p>
     return(
       <div className="ui container">

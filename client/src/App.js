@@ -16,9 +16,7 @@ export default React.createClass({
 
         <Route exact path="/" component={Home} />
         <Route exact path="/festivals" component={Festivals} />
-        <Route path="/festivals/:name" render={({ match }) => (
-            <FestivalPage component={FestivalPage} />
-          )} />
+        <Route path="/festivals/:name" component={FestivalPage} />
         </div>
       </Router>
     )
