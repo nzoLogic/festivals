@@ -5,7 +5,9 @@ Set out to learn ReactJS and with festival season upon us, what better way to ce
 
 Server entry point is index.js which serves the React front-end through the 'client' directory.
 
-If you cloned the repo, **you must have mongodb installed and running** then run npm start in the root directory in your terminal. That triggers concurrently to run the server and webpack client server.
+If you cloned the repo, **you must have mongodb installed and running** then run node seed.js to seed your database.
+
+Run npm start in the root directory in your terminal. That triggers concurrently to run the server and webpack client server.
 
 
 ### Technological Features
