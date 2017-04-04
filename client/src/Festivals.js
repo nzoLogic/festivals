@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Client from './Client'
 import FestivalRow from './Festival'
-import { Route } from 'react-router-dom'
 
 class Festivals extends Component {
   constructor(props){
