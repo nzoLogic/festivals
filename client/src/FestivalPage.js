@@ -17,7 +17,9 @@ class FestivalPage extends Component {
       "Electric Forrest": "https://www.electricforestfestival.com/"
     }
     let explore = festivalLinks[festivalName]
-    const loading = <p>...loading...</p>
+    const loading = <div className="ui active inverted dimmer">
+    <div className="ui text loader">Loading</div>
+  </div>
     return(
       <div className="ui grid container">
         { festival ?
