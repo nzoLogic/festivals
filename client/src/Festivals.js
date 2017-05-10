@@ -8,9 +8,8 @@ class Festivals extends Component {
     this.state = {
       festivals: null
     }
+    Client.search(this.props.match.url, (response) => this.setState({festivals: response}))
   }
-
-  getFestivals = Client.search(this.props.match.url, (response) => this.setState({festivals: response}))
 
   render() {
     const festivals = this.state.festivals
